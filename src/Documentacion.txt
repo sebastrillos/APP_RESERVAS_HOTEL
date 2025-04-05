@@ -1,0 +1,58 @@
+Grupo D
+Aplicación de Gestión de Reservas en un Hotel
+Objetivo:
+Desarrollar una aplicación en Java que permita gestionar las reservas de habitaciones en un hotel, usando arrays y matrices para registrar información sobre las reservas,
+ calcular el costo total y mostrar un reporte con las habitaciones disponibles y ocupadas.
+Instrucciones:
+Formen grupos de tres personas.
+Cada miembro del grupo deberá participar en la implementación del proyecto, ya sea en la parte lógica, de código o en la gestión del equipo.
+Contexto del Problema:
+Ustedes han sido contratados para desarrollar un sistema de reservas para un hotel. El sistema debe permitir registrar el nombre del cliente, el número de la habitación,
+ el número de noches reservadas y el precio por noche. El sistema también debe calcular el total a pagar por cada cliente y generar un reporte con las habitaciones
+  disponibles y ocupadas.
+Requisitos Funcionales:
+El sistema debe gestionar las reservas de al menos 5 habitaciones.
+Cada reserva debe incluir el nombre del cliente, el número de noches y el precio por noche.
+El sistema debe calcular el total a pagar por cada cliente (número de noches * precio por noche).
+El sistema debe mostrar las habitaciones que están ocupadas y las que están disponibles.
+Debe permitir cancelar una reserva, liberando la habitación.
+Al final, debe generar un reporte con el estado del hotel: cuántas habitaciones están ocupadas y cuántas disponibles.
+Puntos Clave para el Desarrollo:
+Declaración de variables:
+Utilicen variables para almacenar el nombre del cliente, número de habitación, noches reservadas y precio por noche.
+Operadores aritméticos:
+Utilicen operadores para calcular el total a pagar por cada reserva.
+Entrada y salida de datos:
+Utilicen el sistema de entrada para registrar las reservas y mostrar los resultados en la consola.
+Estructuras de control:
+Utilicen estructuras de control para verificar si una habitación está ocupada o no, y permitir cancelar reservas.
+Arrays:
+Utilicen arrays para almacenar la información de cada reserva.
+Matrices:
+Utilicen matrices para gestionar las habitaciones del hotel (por ejemplo, una matriz con filas representando pisos y columnas representando habitaciones).
+División de Tareas:
+Cada miembro del grupo debe encargarse de una parte del proyecto:
+Miembro 1: Se encarga de la entrada de datos y la creación de arrays/matrices para almacenar las reservas.
+Miembro 2: Implementa la lógica para calcular el total a pagar y gestionar las reservas.
+Miembro 3: Genera el reporte final mostrando las habitaciones ocupadas y disponibles, y se asegura de que el programa funcione correctamente.
+Entrega y Evaluación:
+Cada grupo debe entregar el código en un archivo .java comentado, explicando brevemente lo que hace cada bloque de código.
+Cada grupo deberá presentar su solución y explicar cómo resolvieron el problema.
+La calificación se basará en:
+Correcta aplicación de conceptos.
+Estructura lógica del código.
+Uso adecuado de arrays, matrices y estructuras de control.
+Claridad en la presentación y en los comentarios del código.
+Trabajo en equipo.
+Ejemplo de Entrada:
+Ingrese el nombre del cliente: María
+Ingrese el número de habitación: 102
+Ingrese el número de noches: 3
+Ingrese el precio por noche: 50.0
+...
+​
+Ejemplo de Salida:
+Reporte Final:
+Cliente: María - Habitación: 102 - Total a pagar: 150.0
+Habitaciones disponibles: 101, 103, 104
+Habitaciones ocupadas: 102
