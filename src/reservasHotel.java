@@ -10,9 +10,9 @@ public class reservasHotel {
         int numeroClientes = input.nextInt();
         System.out.println("A continucion dijite los datos requeridos:");
 
-        int[][] matriz = new {
-            {´101, 102, 103, 104, 105},
-            {´201, 202, 203, 204, 205}
+        int[][] matriz = {
+            {101, 102, 103, 104, 105},
+            {201, 202, 203, 204, 205}
         }; 
 
        for (int i = 0; i < numeroClientes; i++) {
