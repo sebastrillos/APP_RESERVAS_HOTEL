@@ -38,7 +38,7 @@ public class reservasHotel {
             for (int[] libres1 : libres) {
                 for (int j = 0; j < libres1.length; j++) {
                    if (libres[i][j] == habitacionUsuarioUno) {
-                       ocupadas[1] = libres[i][j];
+                       ocupadas[i] = libres[i][j];
                        libres[i][j] = 0;
                        
                    }
@@ -66,7 +66,7 @@ public class reservasHotel {
             for (int[] libres1 : libres) {
                 for (int j = 0; j < libres1.length; j++) {
                    if (libres[i][j] == habitacionUsuarioDos) {
-                       ocupadas[2] = libres[i][j];
+                       ocupadas[i] = libres[i][j];
                        libres[i][j] = 0;
                    }
                 }
@@ -91,10 +91,10 @@ public class reservasHotel {
             int habitacionUsuarioTresPresio = input.nextInt();
             for (int[] libres1 : libres) {
                 for (int j = 0; j < libres1.length; j++) {
-                   if (libres[i][j] == habitacionUsuarioTres) {
-                       ocupadas[3] = libres[i][j];
-                       libres[i][j] = 0;
-                   }
+                    if (libres[i][j] == habitacionUsuarioTres) {
+                        ocupadas[i] = libres[i][j];
+                        libres[i][j] = 0;
+                    }
                 }
             }
                 }
@@ -118,7 +118,7 @@ public class reservasHotel {
             for (int[] libres1 : libres) {
                 for (int j = 0; j < libres1.length; j++) {
                    if (libres[i][j] == habitacionUsuarioCuatro) {
-                       ocupadas[4] = libres[i][j];
+                       ocupadas[i] = libres[i][j];
                        libres[i][j] = 0;
                    }
                 }
@@ -144,7 +144,7 @@ public class reservasHotel {
             for (int[] libres1 : libres) {
                 for (int j = 0; j < libres1.length; j++) {
                    if (libres[i][j] == habitacionUsuarioCinco) {
-                       ocupadas[5] = libres[i][j];
+                       ocupadas[i] = libres[i][j];
                        libres[i][j] = 0;
                    }
                 }
@@ -170,7 +170,7 @@ public class reservasHotel {
             for (int[] libres1 : libres) {
                 for (int j = 0; j < libres1.length; j++) {
                    if (libres[i][j] == habitacionUsuarioSeis) {
-                       ocupadas[6] = libres[i][j];
+                       ocupadas[i] = libres[i][j];
                        libres[i][j] = 0;
                    }
                 }
@@ -196,7 +196,7 @@ public class reservasHotel {
             for (int[] libres1 : libres) {
                 for (int j = 0; j < libres1.length; j++) {
                    if (libres[i][j] == habitacionUsuarioSiete) {
-                       ocupadas[7] = libres[i][j];
+                       ocupadas[i] = libres[i][j];
                        libres[i][j] = 0;
                    }
                 }
@@ -222,7 +222,7 @@ public class reservasHotel {
             for (int[] libres1 : libres) {
                 for (int j = 0; j < libres1.length; j++) {
                    if (libres[i][j] == habitacionUsuarioOcho) {
-                       ocupadas[8] = libres[i][j];
+                       ocupadas[i] = libres[i][j];
                        libres[i][j] = 0;
                    }
                 }
@@ -248,7 +248,7 @@ public class reservasHotel {
             for (int[] libres1 : libres) {
                 for (int j = 0; j < libres1.length; j++) {
                    if (libres[i][j] == habitacionUsuarioNueve) {
-                       ocupadas[9] = libres[i][j];
+                       ocupadas[i] = libres[i][j];
                        libres[i][j] = 0;
                    }
                 }
@@ -274,7 +274,7 @@ public class reservasHotel {
             for (int[] libres1 : libres) {
                 for (int j = 0; j < libres1.length; j++) {
                    if (libres[i][j] == habitacionUsuarioDiez) {
-                       ocupadas[10] = libres[i][j];
+                       ocupadas[i] = libres[i][j];
                        libres[i][j] = 0;
                    }
                 }
