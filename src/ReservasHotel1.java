@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class ReserbasHotel {
+public class ReservasHotel1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Bienvenido a la app de gestion de reservas. ");
@@ -14,7 +14,7 @@ public class ReserbasHotel {
 
 
         for (int i = 0; i < numeroClientes; i++) {
-            System.err.println();
+            System.out.println();
             System.out.println("nuevo usuario");
             System.out.print("ingrese su nombre: ");
             String usuario = input.next();
