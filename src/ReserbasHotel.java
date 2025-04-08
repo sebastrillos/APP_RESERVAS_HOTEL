@@ -34,7 +34,7 @@ public class ReserbasHotel {
                if (libres[j] == habitacionUsuario) {
                 System.out.println("¿desea canselar la reserva?");
                 System.out.println("1) si cancelar.");
-                System.out.println("2) No continuar.");
+                System.out.println("2) No, continuar.");
                 byte cancelar = input.nextByte();
                 if (cancelar==2) {
                     ocupadas[j] = libres[j];
