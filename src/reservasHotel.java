@@ -13,290 +13,79 @@ public class reservasHotel {
         int[][] libres = {
             {101, 102, 103, 104, 105},
             {201, 202, 203, 204, 205}
-        }; 
-        int[] ocupadas = new int[10];
+        };
+         int longitud = libres.length;
+        int[][] ocupadas = new int[2][5];
+        String[] usuarios = new String[9];
+        int[] precios = new int[10];
+        int[] habitaciones = new int[10];
        for (int i = 0; i < numeroClientes; i++) {
-        switch (i) {
-            case 0 -> {
-                System.out.println("primer usuario");
+                System.out.println("nuevo usuario");
                 System.out.print("ingrese su nombre: ");
-                String primerUsuario = input.next();
+                String usuario = input.next();
+                usuarios[i] = usuario ;
                 System.out.print("numero de noches que se desea hospedar en el hotel: ");
-                int nochesUsuarioUno = input.nextInt();
+                int nochesUsuario = input.nextInt();
                 System.out.println("Las habitaciones disponibles son: ");
-            for (int[] libres1 : libres) {
-                for (int j = 0; j < libres1.length; j++) {
-                    System.out.print(libres1[j] + ", ");
-                }
+             for (int k = 0; k < longitud; k++) {
+                 for (int j = 0; j < libres[k].length; j++) {
+                    System.out.print(libres[k][j] + " "); 
+                 }
+                 System.out.println();
+             }
+             System.out.print("Cual habitacion eligio: ");
+            int habitacionUsuario = input.nextInt();
+            System.out.print("ingrese el presio de la habitacion por cada noche:  ");
+            int presioHavitacion = input.nextInt();
+             for (int h = 0; h < longitud; h++) {
+                 for (int m = 0; m < libres[h].length; m++) {
+                    if (libres[h][m] == habitacionUsuario) { 
+                            System.out.println("¿desea canselar la reserva?");
+                            System.out.println("1) si.");
+                            System.out.println("2) No.");
+                            byte cancelar = input.nextByte();
+                            if (cancelar==2) {
+                                ocupadas[h][m] = libres[h][m];
+                                libres[h][m] = 0;
+                            }
+                    } 
+                 }
+                 for (int y = 0; y < habitaciones.length; y++) {
+                    habitaciones[y] = habitacionUsuario;
+                     
+                 }
+             }
+          
+            int presio = presioHavitacion * nochesUsuario;
+            precios[i] = presio;
+            
+            
+        }
+        for (int l = 0; l < numeroClientes ; l++) {
                 System.out.println();
+                System.out.println("Cliente: " + (l + 1) + " - nombre -  " + usuarios[l] + " - habitacion - " + habitaciones[l] + " - Total a pagar - " + precios[l] );    
+            
+        }
+        System.out.println();
+        System.out.println("Habitaciones que estan disponibles son: ");
+        for (int f = 0; f < longitud; f++) {
+            for (int s = 0; s < libres[f].length; s++) {
                 
-            }
-            System.out.print("Cual habitacion eligio: ");
-            int habitacionUsuarioUno = input.nextInt();
-            System.out.print("ingrese el presio de la habitacion por cada noche:  ");
-            int habitacionUsuarioUnoPresio = input.nextInt();
-            for (int[] libres1 : libres) {
-                for (int j = 0; j < libres1.length; j++) {
-                   if (libres[i][j] == habitacionUsuarioUno) {
-                       ocupadas[i] = libres[i][j];
-                       libres[i][j] = 0;
-                       
-                   }
-                }
-            }
-                }
-                
-            case 1 -> {
-                System.out.println("segundo usuario");
-                System.out.print("ingrese su nombre: ");
-                String segundoUsuario = input.next();
-                System.out.print("numero de noches que se desea hospedar en el hotel: ");
-                int nochesUsuarioDos = input.nextInt();
-                System.out.println("Las habitaciones disponibles son: ");
-                for (int[] libres1 : libres) {
-                    for (int j = 0; j < libres1.length; j++) {
-                        System.out.print(libres1[j] + ", ");
-                    }
-                    System.out.println();
-                }
-            System.out.print("Cual habitacion eligio: ");
-            int habitacionUsuarioDos = input.nextInt();
-            System.out.print("ingrese el presio de la habitacion por cada noche:  ");
-            int habitacionUsuarioDosPresio = input.nextInt();
-            for (int[] libres1 : libres) {
-                for (int j = 0; j < libres1.length; j++) {
-                   if (libres[i][j] == habitacionUsuarioDos) {
-                       ocupadas[i] = libres[i][j];
-                       libres[i][j] = 0;
-                   }
-                }
-            }
-                }
-            case 2 -> {
-                System.out.println("tercer usuario");
-                System.out.print("ingrese su nombre: ");
-                String tercerUsuario = input.next();
-                System.out.print("numero de noches que se desea hospedar en el hotel: ");
-                int nochesUsuarioTres = input.nextInt();
-                System.out.println("Las habitaciones disponibles son: ");
-                for (int[] libres1 : libres) {
-                    for (int j = 0; j < libres1.length; j++) {
-                        System.out.print(libres1[j] + ", ");
-                    }
-                    System.out.println();
-                }
-            System.out.print("Cual habitacion eligio: ");
-            int habitacionUsuarioTres = input.nextInt();
-            System.out.print("ingrese el presio de la habitacion por cada noche:  ");
-            int habitacionUsuarioTresPresio = input.nextInt();
-            for (int[] libres1 : libres) {
-                for (int j = 0; j < libres1.length; j++) {
-                    if (libres[i][j] == habitacionUsuarioTres) {
-                        ocupadas[i] = libres[i][j];
-                        libres[i][j] = 0;
-                    }
-                }
-            }
-                }
-            case 3 -> {
-                System.out.println("cuarto usuario");
-                System.out.print("ingrese su nombre: ");
-                String cuartoUsuario = input.next();
-                System.out.print("numero de noches que se desea hospedar en el hotel: ");
-                int nochesUsuarioCuatro = input.nextInt();
-                System.out.println("Las habitaciones disponibles son: ");
-                for (int[] libres1 : libres) {
-                    for (int j = 0; j < libres1.length; j++) {
-                        System.out.print(libres1[j] + ", ");
-                    }
-                    System.out.println();
-                }
-            System.out.print("Cual habitacion eligio: ");
-            int habitacionUsuarioCuatro = input.nextInt();
-            System.out.print("ingrese el presio de la habitacion por cada noche:  ");
-            int habitacionUsuarioCuatroPresio = input.nextInt();
-            for (int[] libres1 : libres) {
-                for (int j = 0; j < libres1.length; j++) {
-                   if (libres[i][j] == habitacionUsuarioCuatro) {
-                       ocupadas[i] = libres[i][j];
-                       libres[i][j] = 0;
-                   }
-                }
-            }
-                }
-            case 4 -> {
-                System.out.println("quinto usuario");
-                System.out.print("ingrese su nombre: ");
-                String quintoUsuario = input.next();
-                System.out.print("numero de noches que se desea hospedar en el hotel: ");
-                int nochesUsuarioCinco = input.nextInt();
-                System.out.println("Las habitaciones disponibles son: ");
-                for (int[] libres1 : libres) {
-                    for (int j = 0; j < libres1.length; j++) {
-                        System.out.print(libres1[j] + ", ");
-                    }
-                    System.out.println();
-                }
-            System.out.print("Cual habitacion eligio: ");
-            int habitacionUsuarioCinco = input.nextInt();
-            System.out.print("ingrese el presio de la habitacion por cada noche:  ");
-            int habitacionUsuarioCincoPresio = input.nextInt();
-            for (int[] libres1 : libres) {
-                for (int j = 0; j < libres1.length; j++) {
-                   if (libres[i][j] == habitacionUsuarioCinco) {
-                       ocupadas[i] = libres[i][j];
-                       libres[i][j] = 0;
-                   }
-                }
-            }
-                }
-            case 5 -> {
-                System.out.println("sexto usuario");
-                System.out.print("ingrese su nombre: ");
-                String sextoUsuario = input.next();
-                System.out.print("numero de noches que se desea hospedar en el hotel: ");
-                int nochesUsuarioSeis = input.nextInt();
-                System.out.println("Las habitaciones disponibles son: ");
-                for (int[] libres1 : libres) {
-                    for (int j = 0; j < libres1.length; j++) {
-                        System.out.print(libres1[j] + ", ");
-                    }
-                    System.out.println();
-                }
-            System.out.print("Cual habitacion eligio: ");
-            int habitacionUsuarioSeis = input.nextInt();
-            System.out.print("ingrese el presio de la habitacion por cada noche:  ");
-            int habitacionUsuarioSeisPresio = input.nextInt();
-            for (int[] libres1 : libres) {
-                for (int j = 0; j < libres1.length; j++) {
-                   if (libres[i][j] == habitacionUsuarioSeis) {
-                       ocupadas[i] = libres[i][j];
-                       libres[i][j] = 0;
-                   }
-                }
-            }
-                }
-            case 6 -> {
-                System.out.println("septimo usuario");
-                System.out.print("ingrese su nombre: ");
-                String septimoUsuario = input.next();
-                System.out.print("numero de noches que se desea hospedar en el hotel: ");
-                int nochesUsuarioSiete = input.nextInt();
-                System.out.println("Las habitaciones disponibles son: ");
-                for (int[] libres1 : libres) {
-                    for (int j = 0; j < libres1.length; j++) {
-                        System.out.print(libres1[j] + ", ");
-                    }
-                    System.out.println();
-                }
-            System.out.print("Cual habitacion eligio: ");
-            int habitacionUsuarioSiete = input.nextInt();
-            System.out.print("ingrese el presio de la habitacion por cada noche:  ");
-            int habitacionUsuarioSietePresio = input.nextInt();
-            for (int[] libres1 : libres) {
-                for (int j = 0; j < libres1.length; j++) {
-                   if (libres[i][j] == habitacionUsuarioSiete) {
-                       ocupadas[i] = libres[i][j];
-                       libres[i][j] = 0;
-                   }
-                }
-            }
-                }
-            case 7 -> {
-                System.out.println("octavo usuario");
-                System.out.print("ingrese su nombre: ");
-                String octavoUsuario = input.next();
-                System.out.print("numero de noches que se desea hospedar en el hotel: ");
-                int nochesUsuarioOcho = input.nextInt();
-                System.out.println("Las habitaciones disponibles son: ");
-                for (int[] libres1 : libres) {
-                    for (int j = 0; j < libres1.length; j++) {
-                        System.out.print(libres1[j] + ", ");
-                    }
-                    System.out.println();
-                }
-            System.out.print("Cual habitacion eligio: ");
-            int habitacionUsuarioOcho = input.nextInt();
-            System.out.print("ingrese el presio de la habitacion por cada noche:  ");
-            int habitacionUsuarioOchoPresio = input.nextInt();
-            for (int[] libres1 : libres) {
-                for (int j = 0; j < libres1.length; j++) {
-                   if (libres[i][j] == habitacionUsuarioOcho) {
-                       ocupadas[i] = libres[i][j];
-                       libres[i][j] = 0;
-                   }
-                }
-            }
-                }
-            case 8 -> {
-                System.out.println("noveno usuario");
-                System.out.print("ingrese su nombre: ");
-                String novenoUsuario = input.next();
-                System.out.print("numero de noches que se desea hospedar en el hotel: ");
-                int nochesUsuarioNueve = input.nextInt();
-                System.out.println("Las habitaciones disponibles son: ");
-                for (int[] libres1 : libres) {
-                    for (int j = 0; j < libres1.length; j++) {
-                        System.out.print(libres1[j] + ", ");
-                    }
-                    System.out.println();
-                }
-            System.out.print("Cual habitacion eligio: ");
-            int habitacionUsuarioNueve = input.nextInt();
-            System.out.print("ingrese el presio de la habitacion por cada noche:  ");
-            int habitacionUsuarioNuevePresio = input.nextInt();
-            for (int[] libres1 : libres) {
-                for (int j = 0; j < libres1.length; j++) {
-                   if (libres[i][j] == habitacionUsuarioNueve) {
-                       ocupadas[i] = libres[i][j];
-                       libres[i][j] = 0;
-                   }
-                }
-            }
-                }
-            case 9 -> {
-                System.out.println("decimo usuario");
-                System.out.print("ingrese su nombre: ");
-                String decimoUsuario = input.next();
-                System.out.print("numero de noches que se desea hospedar en el hotel: ");
-                int nochesUsuarioDiez = input.nextInt();
-                System.out.println("Las habitaciones disponibles son: ");
-                for (int[] libres1 : libres) {
-                    for (int j = 0; j < libres1.length; j++) {
-                        System.out.print(libres1[j] + ", ");
-                    }
-                    System.out.println();
-                }
-            System.out.print("Cual habitacion eligio: ");
-            int habitacionUsuarioDiez = input.nextInt();
-            System.out.print("ingrese el presio de la habitacion por cada noche:  ");
-            int habitacionUsuarioDiezPresio = input.nextInt();
-            for (int[] libres1 : libres) {
-                for (int j = 0; j < libres1.length; j++) {
-                   if (libres[i][j] == habitacionUsuarioDiez) {
-                       ocupadas[i] = libres[i][j];
-                       libres[i][j] = 0;
-                   }
-                }
-            }
-                }
-            default -> System.out.println("¡Numero de usarios sobre capasidad de sistema!");
-        }   
-        
-        
-       }
-       System.out.println("habitaciones ocupadas: ");
-        
-            for (int k = 0; k < ocupadas.length; k++) {
-                System.out.print(ocupadas[k] + ", ");
+                System.out.println(libres[f][s]);
             }
             System.out.println();
-            System.out.println("habitaciones disponibles: ");
-            for (int[] libres1 : libres) {
-                for (int j = 0; j < libres1.length; j++) {
-                    System.out.print(libres1[j] + ", ");
-                }
-                System.out.println();
+        }
+        System.out.println();
+            System.out.println("Habitaciones que estan ocupadas son: ");
+        
+        for (int v = 0; v < longitud; v++) {
+            for (int p = 0; p < ocupadas[v].length; p++) {
+                
+               System.out.println(ocupadas[v][p]);
             }
+            System.out.println();
+        }
+        input.close();
    }
- }
+}
+

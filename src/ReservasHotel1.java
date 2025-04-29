@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class ReservasHotel1 {
+public class ReservasHotel1 { 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Bienvenido a la app de gestion de reservas. ");
@@ -28,8 +28,8 @@ public class ReservasHotel1 {
         System.out.print("Cual habitacion eligio: ");
         int habitacionUsuario = input.nextInt();
         System.out.print("ingrese el presio de la habitacion por cada noche:  ");
-        double presioHabitacion = input.nextDouble();
-        double valorTotal = presioHabitacion * nochesUsuario;
+        int presioHabitacion = input.nextInt();
+        int valorTotal = presioHabitacion * nochesUsuario;
         for (int j = 0; j < libres.length; j++) {
                if (libres[j] == habitacionUsuario) {
                 System.out.println("¿desea canselar la reserva?");
@@ -39,8 +39,11 @@ public class ReservasHotel1 {
                 if (cancelar==2) {
                     ocupadas[j] = libres[j];
                    libres[j] = 0;
+                   System.out.println();
                    System.out.println("Reporte final:");
+                   System.out.println();
         System.out.println("Cliente: " + usuario + " - Habitacion: " + habitacionUsuario + " - Total a pagar: " + valorTotal);
+        System.out.println();
         System.out.println("habitaciones ocupadas: ");
         for (int y = 0; y < ocupadas.length; y++) {
                 System.out.print(ocupadas[y] + ", ");
