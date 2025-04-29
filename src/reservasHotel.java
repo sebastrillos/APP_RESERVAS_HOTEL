@@ -6,7 +6,7 @@ public class reservasHotel {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("bienvenido a la app de gestion de reservas. ");
-        System.out.print("ingrese el numero de clientes maximo 10:  ");
+        System.out.print("ingrese el numero de clientes (maximo 10):  ");
         int numeroClientes = input.nextInt();
         System.out.println("A continucion dijite los datos requeridos:");
 
@@ -48,6 +48,7 @@ public class reservasHotel {
                                 ocupadas[h][m] = libres[h][m];
                                 libres[h][m] = 0;
                             }
+                          
                     } 
                  }
                  for (int y = 0; y < habitaciones.length; y++) {
@@ -71,7 +72,7 @@ public class reservasHotel {
         for (int f = 0; f < longitud; f++) {
             for (int s = 0; s < libres[f].length; s++) {
                 
-                System.out.println(libres[f][s]);
+                System.out.print(libres[f][s] + " ");
             }
             System.out.println();
         }
@@ -81,7 +82,7 @@ public class reservasHotel {
         for (int v = 0; v < longitud; v++) {
             for (int p = 0; p < ocupadas[v].length; p++) {
                 
-               System.out.println(ocupadas[v][p]);
+               System.out.print(ocupadas[v][p] + " ");
             }
             System.out.println();
         }
